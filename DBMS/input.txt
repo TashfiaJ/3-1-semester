@@ -1,0 +1,8 @@
+3 2 7
+r2X
+r3Y
+r3X
+r1Y
+r2X
+w1Y
+w1X
