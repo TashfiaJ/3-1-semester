@@ -10,6 +10,7 @@ bool vis[10];
 
 void dfs(ll node)
 {
+    if(Cycle)return;
     vis[node]=1;
     for(auto x: g[node])
     {   
@@ -17,6 +18,7 @@ void dfs(ll node)
         if(vis[node] && x!=node)
         {
             Cycle=true;
+            return;
         }
     }
 }
@@ -24,10 +26,8 @@ void dfs(ll node)
 int main()
 {   
     freopen("input.txt", "r", stdin);
-    cin>>node>>element>>total_operation;
-    for(ll i=0;i<total_operation;i++){
     char c1, c2, c3;
-    cin>>c1>>c2>>c3;
+    while(cin>>c1>>c2>>c3){
     string s="";
     s+=c1;
     s+=c2;
