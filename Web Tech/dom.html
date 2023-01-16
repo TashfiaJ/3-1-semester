@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <style>
+
+        </style>
+    </head>
+    <body id="body">
+        <p>This is para1</p>
+        <p>This is para2</p>
+        <p>This is para3</p>
+        <script>
+            let para = document.createElement("p");
+            para.innerText = "This is a para4";
+            document.body.appendChild(para);
+
+            let butt = document.createElement("button");
+            butt.innerText = "click here";
+            document.body.appendChild(butt);
+
+            // let para2=document.getElementById("p2");
+            // para2.remove();
+
+            // let list = document.getElementsByTagName("body");
+            //list[0].removeChild(list[0].firstElementChild);
+
+            let newNode = document.createElement("p");
+            newNode.innerText="This is tashfia";
+           // let textNode = document.createTextNode("Water");
+            //newNode.appendChild(textNode);
+
+            let list = document.getElementById("body");
+            list.insertBefore(newNode, list.children[0]);
+
+            
+        </script>
+    </body>
+</html>
