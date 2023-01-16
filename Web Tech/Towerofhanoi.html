@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <style>
+            #div1{
+                width: 33%;
+                height: 40%;
+                border: 2px solid green;
+                text-align: center;
+                float: left;
+                
+            }
+            #div2{
+                width: 33%;
+                height: 40%;
+                border: 2px solid green;
+                text-align: center;
+                float: left;
+            }
+            #div3{
+                width: 33%;
+                height: 40%;
+                border: 2px solid green;
+                text-align: center;
+                float: left;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mydiv">
+        <div id="div1">
+            <button id="2">2</button><br>
+            <button id="4">4</button><br>
+            <button id="3">3</button><br>
+            <button id="1">1</button><br>
+        </div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+        <br>
+        <br><br>
+        <button id="1to2">1->2</button>
+        <button id="2to3">2->3</button>
+        <button id="3to1">3->1</button>
+        <br>
+        <button id="3to2">3->2</button>
+        <button id="2to1">2->1</button>
+        <button id="1to3">1->3</button>
+        </div>
+
+        <script>
+
+            let button1=document.getElementById("1to2");
+            let button2=document.getElementById("2to3");
+            let button3=document.getElementById("3to1");
+            let button4=document.getElementById("3to2");
+            let button5=document.getElementById("2to1");
+            let button6=document.getElementById("1to3");
+
+            let div1=document.getElementById("div1");
+            let div2=document.getElementById("div2");
+            let div3=document.getElementById("div3");
+
+            button1.addEventListener("click", myFunction1);
+            button2.addEventListener("click", myFunction2);
+            button3.addEventListener("click", myFunction3);
+            button4.addEventListener("click", myFunction4);
+            button5.addEventListener("click", myFunction5);
+            button6.addEventListener("click", myFunction6);
+
+            function myFunction1() {
+            let e1 = div1.firstElementChild;
+            div1.removeChild(div1.firstElementChild);
+            div2.insertBefore(e1, div2.firstElementChild);
+            }
+
+            function myFunction2() {
+            let e1 = div2.firstElementChild;
+            div2.removeChild(div2.firstElementChild);
+            div3.insertBefore(e1, div3.firstElementChild);
+            }
+
+            function myFunction3() {
+            let e1 = div3.firstElementChild;
+            div3.removeChild(div3.firstElementChild);
+            div1.insertBefore(e1, div1.firstElementChild);
+            }
+
+            function myFunction4() {
+            let e1 = div3.firstElementChild;
+            div3.removeChild(div3.firstElementChild);
+            div2.insertBefore(e1, div2.firstElementChild);
+            }
+
+            function myFunction5() {
+            let e1 = div2.firstElementChild;
+            div2.removeChild(div2.firstElementChild);
+            div1.insertBefore(e1, div1.firstElementChild);
+            }
+
+            function myFunction6() {
+            let e1 = div1.firstElementChild;
+            div1.removeChild(div1.firstElementChild);
+            div3.insertBefore(e1, div3.firstElementChild);
+            }
+        </script>
+    </body>
+</html>
