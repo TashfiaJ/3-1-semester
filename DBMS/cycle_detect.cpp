@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long
-const ll N = 1e5+5;
+const ll N = 2e5+5;
 vector<ll>g[N];
 ll node, element, total_operation;
 map<char,vector<string>>mp;
@@ -74,11 +74,6 @@ int main()
         element++;
     }
     node=st.size();
-    for(ll i=1;i<=4;i++)
-    {   cout<<i<<": ";
-        for(ll j=0;j<g[i].size();j++)cout<<g[i][j]<<" ";
-        cout<<'\n';
-    }
     for(ll i=1;i<=node;i++)
     {
         if(vis[i]==0)
