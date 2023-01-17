@@ -1,6 +1,6 @@
 public class WordConverter extends ConverterManager {
 
-    // CONCRETE PRODUCT B
+    // CONCRETE CREATOR B
     @Override
     public Converter convert() {
         return new WordToPDFConverter();
@@ -11,3 +11,4 @@ public class WordConverter extends ConverterManager {
         return new WordDocMerger();
     }
 }
+
