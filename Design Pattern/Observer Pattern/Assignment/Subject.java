@@ -12,9 +12,9 @@ public abstract class Subject {
         observers.remove(observer);
     }
 
-    public void notifyObservers() {
+    public void notifyObservers(String message) {
         for (Observer observer : observers) {
-            observer.update(this);
+            observer.update(message);
         }
     }
 }
