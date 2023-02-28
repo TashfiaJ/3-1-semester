@@ -1,29 +1,15 @@
 import java.io.File;
-
+import java.io.IOException;
+import java.nio.file.Paths;
+import java.nio.file.*;
 public class Main {
-    public static void main(String[] args) {
-        File file = new File("file.txt");
-        ConcreteSubject subject = new ConcreteSubject(file);
-        ConcreteObserver observer1 = new ConcreteObserver("Observer 1");
-        ConcreteObserver observer2 = new ConcreteObserver("Observer 2");
-        subject.registerObserver(observer1);
-        subject.registerObserver(observer2);
-        Thread thread = new Thread(() -> {
-            subject.watchFile();
-        });
-        thread.start();
+    public static void main(String[] args) throws IOException, InterruptedException {
 
-        // simulate file changes
-        Thread thread2 = new Thread(() -> {
-            while (true) {
-                try {
-                    Thread.sleep(5000); // wait for 5 seconds
-                    file.createNewFile();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-        thread2.start();
+        Path path = Paths.get("src/File");
+        ConcreteSubject subject = new ConcreteSubject(path);
+        ConcreteObserver observer1 = new ConcreteObserver("Observer 1");
+        subject.registerObserver(observer1);
+        subject.watchFile();
+
     }
 }
