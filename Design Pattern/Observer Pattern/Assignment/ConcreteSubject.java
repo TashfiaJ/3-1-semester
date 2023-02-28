@@ -32,23 +32,5 @@ public class ConcreteSubject extends Subject {
             key.reset();
         }
 
-
-
-
-
-
-
-
-
-//        while (true) {
-//            if (file.exists()) {
-//                notifyObservers();
-//            }
-//           try {
-//                Thread.sleep(1000); // wait for 1 second
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
-//        }
     }
 }
