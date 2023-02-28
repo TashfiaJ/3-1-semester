@@ -8,10 +8,7 @@ public class ConcreteObserver implements Observer {
         this.name = name;
     }
 
-    public void update(Subject subject) {
-        File file = ((ConcreteSubject) subject).getFile();
-        Date lastModified = new Date(file.lastModified());
-        System.out.println(name + ": " + file.getName() + " was modified on " + lastModified);
+    public void update(String message) {
+        System.out.println(message);
     }
 }
-
