@@ -84,7 +84,6 @@
         }
         .email{
             position: relative;
-            color: white;
             left: 200px;
             top: -37px;
             line-height: 40px;
@@ -105,7 +104,6 @@
         }
         .my_photo{
             position: relative;
-            color: white;
             left: 200px;
             top: -37px;
             line-height: 40px;
