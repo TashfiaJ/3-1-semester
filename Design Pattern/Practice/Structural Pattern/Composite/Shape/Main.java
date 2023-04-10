@@ -3,12 +3,12 @@ package StructuralPattern.Composite;
 public class Main {
     public static void main(String[] args) {
         Component square = new Square();
-        Picture component = new Picture();
+        Picture composite = new Picture();
         Component triangle = new Triangle();
 
-        component.add(square);
-        component.add(triangle);
+        composite.add(square);
+        composite.add(triangle);
 
-        component.draw();
+        composite.draw();
     }
 }
