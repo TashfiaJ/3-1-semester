@@ -24,3 +24,21 @@
   </li>
 </ul> -->
 
+<!-- <ul>
+  <li *ngFor="let item of myItems; let i = index">
+    <h3>{{item.name}}</h3>
+    <p>price: {{item.price}}</p>
+    <p>quantity: {{item.quantity}}</p>
+    <ng-container *ngIf="item.quantity <= 0; then restockButton else (item.quantity < 10 ? lowStockButton : buyButton)">
+    </ng-container>
+    <ng-template #restockButton>
+      <button (click)="requestItem(item.name, i)">Restock</button>
+    </ng-template>
+    <ng-template #lowStockButton>
+      <button (click)="updateItem(i)">Low Stock</button>
+    </ng-template>
+    <ng-template #buyButton>
+      <button (click)="updateItem(i)">Buy</button>
+    </ng-template>
+  </li>
+</ul> -->
