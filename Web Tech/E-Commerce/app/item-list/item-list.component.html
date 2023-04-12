@@ -8,3 +8,19 @@
         <button (click)="updateItem(i)">Update</button>
     </li>
 </ul>
+
+
+<!-- <ul>
+  <li *ngFor="let item of myItems; let i = index">
+    <h3>{{item.name}}</h3>
+    <p>price: {{item.price}}</p>
+    <p>quantity: {{item.quantity}}</p>
+    <ng-container *ngIf="item.quantity <= 0; else buyButton">
+      <button (click)="requestItem(item.name, i)">Restock</button>
+    </ng-container>
+    <ng-template #buyButton>
+      <button (click)="updateItem(i)">Buy</button>
+    </ng-template>
+  </li>
+</ul> -->
+
